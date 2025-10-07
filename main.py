@@ -9,6 +9,7 @@ import os
 import json
 from datetime import datetime
 from root import root
+from rinoc import rinoc
 class Space:
     def __init__(self):
         self.user = 0
@@ -131,12 +132,10 @@ class Space:
     _check_plant_growth = _check_plant_growth
     _check_plant_status = _check_plant_status
     root = root
-    save = save
-    load_saves = list_saves
-    load = load
+    rinoc = rinoc
 def main():
     k = Space()
-    print("Добро по жаловать в космическую игру!\nДоступные команды: buy show sleep build play save load_save exit")
+    print("Добро по жаловать в космическую игру!\nДоступные команды: buy show sleep build play save load_save рынок exit")
     while True:
         e = input("\nВведите команду: ").strip().lower()
         if e == "buy":
@@ -155,6 +154,8 @@ def main():
             k.igri()
         elif e == "root":
             k.root()
+        elif e == "рынок":
+            k.rinoc()
         elif e == "exit":
             print("Выход из игры...")
             break
