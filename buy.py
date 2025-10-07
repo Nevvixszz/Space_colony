@@ -84,7 +84,7 @@ def buy(self):
                         print("Недостаточно денег!")
                     else:
                         self.money -= touc * self.potato_touc
-                        self.potato += 1
+                        self.potato += touc
                         self.energy -= 1
                         print("Картошка куплена!")
             break               
